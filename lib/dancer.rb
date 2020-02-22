@@ -7,6 +7,12 @@ class Dancer
   include Dance 
   extend MetaDancing
   
+  extend FancyDance: :ClassMethods 
+  include
+  FancyDance: :InstanceMethods
+end
+  
+  
   attr_accessor :name 
   
   def initialize(name)
